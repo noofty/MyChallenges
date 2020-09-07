@@ -13,13 +13,15 @@ output = []
 
 
 for character in text:
-    number = ord(character) - 96 
+    number = ord(character) + shift
+	if number > ord('z'):
+		number -= 26
     output.append(number)
 
-print (output)
+#print (output)
 
 for i  in range(len(output)):
-	letter = chr((output[i]) + 96 + shift)
+	letter = chr((output[i]))
 	result += letter
 print (result)
     
