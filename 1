@@ -5,3 +5,28 @@ for character in input:
   num = ord(character) - 96
   output.append(num)
 print output
+
+
+#!/usr/bin/env python3
+
+
+
+text = input('Write text: ')
+shift = int(input('Shift amount: '))
+text = text.lower()
+result = ""
+output = []
+
+
+for character in text:
+    number = ord(character) - 96 
+    output.append(number)
+
+print (output)
+
+for i  in range(len(output)):
+	letter = chr((output[i]) + 96 + shift)
+	result += letter
+print (result)
+    
+
